@@ -13,25 +13,23 @@ function setBgColor(color) {
 
 function randomColorGenerator() {
     if (!randomClicked) {
-    h1.classList.add("h1Drip")
-    randomButton.classList.add("randomDrip")
+        h1.classList.add("h1Drip")
+        randomButton.classList.add("randomDrip")
 
-randomButton.addEventListener("mousedown", () => {
-    h1.classList.add("h1DripMore")
-    h1.classList.remove("h1DripBack")
-})
+        randomButton.addEventListener("mousedown", () => {
+            h1.classList.add("h1DripMore")
+            h1.classList.remove("h1DripBack")
+        })
 
-randomButton.addEventListener("mouseup", () => {
-    h1.classList.add("h1DripBack")
-    h1.classList.remove("h1DripMore")
-
-randomButton.addEventListener("mouseleave", () => {
-    h1.classList.add("h1DripBack")
-    h1.classList.remove("h1DripMore")
-})
-})
-
-    randomClicked = true
+        randomButton.addEventListener("mouseup", () => {
+            h1.classList.add("h1DripBack")
+            h1.classList.remove("h1DripMore")
+            randomButton.addEventListener("mouseleave", () => {
+                h1.classList.add("h1DripBack")
+                h1.classList.remove("h1DripMore")
+            })
+        })
+        randomClicked = true
     }
 
     return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0")}`;
