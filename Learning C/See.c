@@ -69,7 +69,15 @@ int main() {
     // printf("%+6.2f\n", price2);
     // printf("%.2f\n", price3);
 
+    // Operators
 
+    int x = 2;
+    int y = 7;
+    int z = 0;
+
+    z-=2;
+
+    printf("\n\n%d\n", z);
 
     return 0;
 }
