@@ -9,6 +9,13 @@ var randomClicked = false
 
 function setBgColor(color) {
     body.style.backgroundColor = color
+    if (randomClicked) {
+        h1.classList.remove("h1Drip")
+        h1.classList.remove("h1DripMore")
+        h1.classList.remove("h1DripBack")
+        randomButton.classList.remove("randomDrip")
+        randomClicked = false
+    }
 }
 
 function randomColorGenerator() {
@@ -32,6 +39,6 @@ function randomColorGenerator() {
         randomClicked = true
     }
 
-    return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0")}`;
+    body.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0")}`
 }
 
