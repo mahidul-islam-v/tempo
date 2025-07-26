@@ -1,15 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-}
-
-h1 {
-    font-size: 80px;
-    margin: 10vh 0 5vh;
     text-align: center;
+    font-family: "Raleway", sans-serif;
 }
 
 main {
     text-align: center;
 }
 
+h1 {
+    font-size: 90px;
+    margin: 12.5vh 0 2.5vh;
+    font-family: "Bitter", serif;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+input:focus, input:focus-visible {
+    border-right: 0;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+button, input {
+    transition: all 0.0625s ease;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.402);
+}
+
+
+input {
+    min-width: 25vw;
+    margin: 0 0 5px;
+    border-radius: 10px 0 0 10px;
+    border-right: 0;
+}
+
+
+button {
+    transition: all .125s ease;
+    margin: 0 5px 0 0 ;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+
+button:hover {
+    padding-left: 15px;
+    margin: 0;
+    filter: invert(100%);
+}
+
+button:active {
+    padding-left: 12px;
+    margin-right: 3px;
+}
+
+i {
+    opacity: .5;
+}
+
+#output {
+    align-items: center;
+    position: relative;
+    top: 100px;
+    font-size: 50px;
+    text-transform: capitalize;
+} #output h3 {
+    font-weight: 900;
+    opacity: 0.9;
+    color: #202321;
+}
