@@ -20,7 +20,7 @@ h1 {
 }
 
 input:focus, input:focus-visible {
-    border-right: 0;
+    outline: none;
 }
 
 input:focus::placeholder {
@@ -28,7 +28,6 @@ input:focus::placeholder {
 }
 
 button, input {
-    transition: all 0.0625s ease;
     font-size: 16px;
     padding: 5px 10px;
     border: 1px solid rgba(0, 0, 0, 0.402);
@@ -54,15 +53,19 @@ button:hover {
     padding-left: 15px;
     margin: 0;
     filter: invert(100%);
+    background-color: #e6e6e6;
 }
 
 button:active {
+    border-color: rgb(194, 194, 194);
+    background-color: #d1d1d1;
     padding-left: 12px;
     margin-right: 3px;
 }
 
 i {
     opacity: .5;
+
 }
 
 #output {
